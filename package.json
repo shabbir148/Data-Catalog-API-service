@@ -1,9 +1,13 @@
 {
-  "name": "data-catalog-api-service-",
+  "name": "data-catalog-api",
   "version": "1.0.0",
-  "main": "./src/index.js",
+  "description": "Simplified Data Catalog API",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts",
+    "test": "jest"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -23,8 +27,5 @@
     "supertest": "^6.3.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  }
 }

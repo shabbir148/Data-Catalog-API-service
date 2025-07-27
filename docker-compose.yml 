@@ -1,0 +1,17 @@
+services:
+  data-catalog-api:
+    image: shabbir148/data-catalog-api:latest
+    container_name: data-catalog-api
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - MONGODB_URI=mongodb+srv://shabbirsidhpurwala7000:1234Sha@cluster0.z65usxy.mongodb.net/myDatabase?retryWrites=true&w=majority
+      - NODE_ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) })"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
