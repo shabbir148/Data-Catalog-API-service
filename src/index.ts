@@ -16,6 +16,8 @@ app.use(express.json());
 
 // Routes
 app.use('/api/events', eventRoutes);
+app.use('/api/properties', propertyRoutes);
+app.use('/api/tracking-plans', trackingPlanRoutes);
 
 
 // Health check
