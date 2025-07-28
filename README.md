@@ -532,9 +532,7 @@ git push origin feature/new-feature
 - Check Docker logs: `docker logs data-catalog-api`
 - Verify environment variables are set correctly
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
